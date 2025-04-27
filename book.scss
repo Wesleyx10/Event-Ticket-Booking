@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --body-bg-color: #02191d;
+  --nav-bg-color: #031e23;
+  --main-font: roboto;
+  --header-font: road rage;
+  --second-font: Nanum Myeongjo;
+  --progress-color: #24a0b5;
+  --free-bf: #12464e;
+}
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at center, #0b454f, #02191d);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 17rem;
+  border: 1.5px solid #197686;
+  padding: 0.7rem;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 1;
+  background: inherit;
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    #event {
+      color: white;
+    }
+    a {
+      color: #b3b3b3;
+      text-decoration: none;
+      font-family: var(--second-font);
+      font-size: 17px;
+    }
+  }
+  #tickett {
+    color: black;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}
+.ticket-ready {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+  background: #041e23;
+  padding: 1.5rem;
+  border: 1.8px solid #0e464f;
+  border-radius: 20px;
+  width: 50%;
+  align-items: center;
+  color: white;
+  .ready {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    #tick {
+      display: flex;
+      gap: 26rem;
+      align-items: center;
+      color: white;
+      font-family: var(--second-font);
+      font-size: 35px;
+      font-weight: 400;
+      small {
+        font-size: 15px;
+        font-family: var(--main-font);
+        font-weight: 300;
+      }
+    }
+    progress {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 5px;
+
+      &::-webkit-progress-bar {
+        background-color: #0e464f;
+        border-radius: 10px;
+      }
+      &::-webkit-progress-value {
+        background-color: #24a0b5;
+        border-radius: 10px;
+      }
+    }
+  }
+  .head-text {
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    span {
+      font-weight: 300;
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: var(--main-font);
+        font-weight: 500;
+      }
+    }
+  }
+  .ticket-border {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background: radial-gradient(circle at center, #031011, #104f58);
+    padding: 1rem;
+    border: 1.8px solid #24a0b5;
+    border-radius: 20px;
+    position: relative;
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      background: #072b2f;
+      padding: 1rem;
+      border-radius: 15px;
+      border: 1.8px solid #24a0b5;
+      gap: 1.5rem;
+      align-items: center;
+
+      .location {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        h1 {
+          font-family: var(--header-font);
+          font-weight: 300;
+          font-size: 45px;
+        }
+        p {
+          font-family: var(--main-font);
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+      img {
+        width: 130px;
+      }
+      .data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        background: #08343c;
+        padding: 1rem;
+        border-radius: 15px;
+        border: 2px solid #133d44;
+        .input {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          color: white;
+          padding: 0;
+          font-family: var(--main-font);
+          #one {
+            border-left: none;
+          }
+          .form-group {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+
+            border-bottom: 2px solid #1a4c54;
+
+            border-left: 2px solid #1a4c54;
+
+            label {
+              font-size: 0.9rem;
+              color: #a0a0a0;
+              margin-bottom: 3px;
+            }
+            .value {
+              font-weight: bold;
+              font-size: 1rem;
+            }
+          }
+        }
+        #req {
+          font-family: var(--main-font);
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: relative;
+          left: 0.5rem;
+          gap: 0.3rem;
+          color: #a0a0a0;
+          font-size: 0.9rem;
+          small {
+            font-weight: bold;
+            font-size: 1rem;
+            color: white;
+          }
+        }
+      }
+    }
+    #bar {
+      width: 280px;
+    }
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    #book {
+      background-color: inherit;
+      border: 1.5px solid #24a0b5;
+      padding: 0.8rem 5rem;
+      border-radius: 10px;
+      color: #24a0b5;
+      font-family: var(--second-font);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #tickets {
+      background-color: #24a0b5;
+      border: none;
+      padding: 0.8rem 5.5rem;
+      border-radius: 10px;
+      color: white;
+      font-family: var(--second-font);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    gap: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+
+    .links {
+      display: none;
+    }
+  }
+  .ticket-ready {
+    width: 75%;
+    .ready {
+      width: 100%;
+      #tick {
+        gap: 9.6rem;
+        white-space: nowrap;
+      }
+    }
+    .head-text {
+      white-space: nowrap;
+      h1 {
+        font-size: 25px;
+      }
+      span {
+        font-size: 13px;
+      }
+    }
+    .ticket-border {
+      .user {
+        gap: 1.5rem;
+        .location {
+          h1 {
+            font-size: 37px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+        img {
+          width: 200px;
+        }
+        .data {
+          font-size: 5px;
+        }
+      }
+    }
+    .btns {
+      flex-direction: column;
+      #tickets {
+        padding: 0.8rem 6.4rem;
+      }
+      #book {
+        padding: 0.8rem 5.8rem;
+      }
+    }
+  }
+}

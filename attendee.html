@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="attendee.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="logo">
+        <img src="images/thumb (1).png" alt="" />
+        <img src="images/ticz (1).png" alt="" />
+      </div>
+      <div class="links">
+        <a id="event" href="">Events</a>
+        <a href="">My Tickets</a>
+        <a href="">About Project</a>
+      </div>
+      <a id="ticket" href=""
+        >MY TICKETS <i class="fa-solid fa-arrow-right"></i
+      ></a>
+    </div>
+    <div class="attendee">
+      <div class="progress">
+        <span>Attendee Details <small>Step 2/3</small></span>
+        <progress id="progress" value="70" max="100"></progress>
+      </div>
+      <div class="details">
+        <div class="upload">
+          <span>Upload Profile Photo</span>
+          <div id="dark-border"></div>
+          <input id="file" type="file" hidden />
+          <label for="file"
+            ><img src="images/Section Title.png" alt=""
+          /></label>
+        </div>
+        <div class="hr"></div>
+        <div class="inputs">
+          <div id="names">
+            <label for="name">Enter Your Name</label>
+            <input id="name" type="text" />
+          </div>
+          <div id="mail">
+            <label for="email">Enter Your Email</label>
+            <input id="email" type="email" />
+          </div>
+          <div id="request">
+            <label for="message">Special Request?</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+        </div>
+        <div class="btns">
+          <button id="back">Back</button>
+          <button id="submitTicket">Get My Free Ticket</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

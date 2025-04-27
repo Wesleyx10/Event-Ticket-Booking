@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --body-bg-color: #02191d;
+  --nav-bg-color: #031e23;
+  --main-font: roboto;
+  --header-font: road rage;
+  --second-font: Nanum Myeongjo;
+  --progress-color: #24a0b5;
+  --free-bf: #12464e;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at center, #0b454f, #02191d);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 17rem;
+  border: 1.5px solid #197686;
+  padding: 0.7rem;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 1;
+  background: inherit;
+}
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .links #event {
+  color: white;
+}
+.nav .links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-family: var(--second-font);
+  font-size: 17px;
+}
+.nav #ticket {
+  color: black;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.attendee {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #041e23;
+  padding: 2rem;
+  border: 1.5px solid #0e464f;
+  border-radius: 20px;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+.attendee .progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: white;
+  gap: 0.7rem;
+}
+.attendee .progress span {
+  display: flex;
+  font-family: var(--second-font);
+  align-items: center;
+  gap: 29rem;
+  font-size: 30px;
+  font-weight: 300;
+}
+.attendee .progress span small {
+  font-family: var(--main-font);
+  font-size: 15px;
+}
+.attendee .progress progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 5px;
+}
+.attendee .progress progress::-webkit-progress-bar {
+  background-color: #0e464f;
+  border-radius: 10px;
+}
+.attendee .progress progress::-webkit-progress-value {
+  background-color: #24a0b5;
+  border-radius: 10px;
+}
+.attendee .details {
+  display: flex;
+  flex-direction: column;
+  background: #08252b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1.5px solid #0e464f;
+  gap: 2rem;
+}
+.attendee .details .upload {
+  display: flex;
+  flex-direction: column;
+  background: #052228;
+  border-radius: 20px;
+  border: 1.5px solid #0e464f;
+  padding: 1.5rem;
+  gap: 1rem;
+  padding-bottom: 2.8rem;
+}
+.attendee .details .upload span {
+  color: white;
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: 300;
+}
+.attendee .details .upload #dark-border {
+  background: #041b20;
+  height: 35vh;
+  width: 100vh;
+}
+.attendee .details .upload label {
+  position: absolute;
+  right: 40%;
+}
+.attendee .details .hr {
+  height: 5px;
+  background-color: #07373f;
+}
+.attendee .details .inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.attendee .details .inputs #names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.attendee .details .inputs #names input {
+  background-color: inherit;
+  outline: none;
+  padding: 0.7rem;
+  border: 1.5px solid #07373f;
+  border-radius: 10px;
+  color: white;
+}
+.attendee .details .inputs #mail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.attendee .details .inputs #mail input {
+  background-color: inherit;
+  outline: none;
+  padding: 0.7rem;
+  border: 1.5px solid #07373f;
+  border-radius: 10px;
+  color: white;
+}
+.attendee .details .inputs #request {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.attendee .details .inputs #request textarea {
+  background-color: inherit;
+  outline: none;
+  padding: 0.7rem 0.7rem 5rem 0.7rem;
+  border: 1.5px solid #07373f;
+  border-radius: 10px;
+  color: white;
+  resize: none;
+}
+.attendee .details .inputs label {
+  color: white;
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: 300;
+}
+.attendee .details .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.attendee .details .btns #back {
+  background-color: inherit;
+  border: 1.5px solid #24a0b5;
+  padding: 0.8rem 9.5rem;
+  border-radius: 10px;
+  color: #24a0b5;
+  font-family: var(--second-font);
+  cursor: pointer;
+}
+.attendee .details .btns #submitTicket {
+  background-color: #24a0b5;
+  border: none;
+  padding: 0.8rem 7rem;
+  border-radius: 10px;
+  color: white;
+  font-family: var(--second-font);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    gap: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  .nav .links {
+    display: none;
+  }
+  .attendee {
+    width: 75%;
+  }
+  .attendee .progress span {
+    gap: 3.2rem;
+    white-space: nowrap;
+    font-size: 25px;
+  }
+  .attendee .details .upload #dark-border {
+    display: none;
+  }
+  .attendee .details .upload label {
+    position: relative;
+    right: 0.3rem;
+    top: 0.5rem;
+  }
+  .attendee .details .upload label img {
+    width: 200px;
+  }
+  .attendee .details .btns {
+    flex-direction: column;
+  }
+  .attendee .details .btns #back {
+    padding: 0.8rem 6.5rem;
+  }
+  .attendee .details .btns #submitTicket {
+    white-space: nowrap;
+    padding: 0.8rem 4rem;
+  }
+}/*# sourceMappingURL=attendee.css.map */

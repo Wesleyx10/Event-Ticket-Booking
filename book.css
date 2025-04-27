@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --body-bg-color: #02191d;
+  --nav-bg-color: #031e23;
+  --main-font: roboto;
+  --header-font: road rage;
+  --second-font: Nanum Myeongjo;
+  --progress-color: #24a0b5;
+  --free-bf: #12464e;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at center, #0b454f, #02191d);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 17rem;
+  border: 1.5px solid #197686;
+  padding: 0.7rem;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 1;
+  background: inherit;
+}
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .links #event {
+  color: white;
+}
+.nav .links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-family: var(--second-font);
+  font-size: 17px;
+}
+.nav #tickett {
+  color: black;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ticket-ready {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+  background: #041e23;
+  padding: 1.5rem;
+  border: 1.8px solid #0e464f;
+  border-radius: 20px;
+  width: 50%;
+  align-items: center;
+  color: white;
+}
+.ticket-ready .ready {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.ticket-ready .ready #tick {
+  display: flex;
+  gap: 26rem;
+  align-items: center;
+  color: white;
+  font-family: var(--second-font);
+  font-size: 35px;
+  font-weight: 400;
+}
+.ticket-ready .ready #tick small {
+  font-size: 15px;
+  font-family: var(--main-font);
+  font-weight: 300;
+}
+.ticket-ready .ready progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 5px;
+}
+.ticket-ready .ready progress::-webkit-progress-bar {
+  background-color: #0e464f;
+  border-radius: 10px;
+}
+.ticket-ready .ready progress::-webkit-progress-value {
+  background-color: #24a0b5;
+  border-radius: 10px;
+}
+.ticket-ready .head-text {
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.ticket-ready .head-text span {
+  font-weight: 300;
+}
+.ticket-ready .head-text span a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--main-font);
+  font-weight: 500;
+}
+.ticket-ready .ticket-border {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  background: radial-gradient(circle at center, #031011, #104f58);
+  padding: 1rem;
+  border: 1.8px solid #24a0b5;
+  border-radius: 20px;
+  position: relative;
+}
+.ticket-ready .ticket-border .user {
+  display: flex;
+  flex-direction: column;
+  background: #072b2f;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 1.8px solid #24a0b5;
+  gap: 1.5rem;
+  align-items: center;
+}
+.ticket-ready .ticket-border .user .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.ticket-ready .ticket-border .user .location h1 {
+  font-family: var(--header-font);
+  font-weight: 300;
+  font-size: 45px;
+}
+.ticket-ready .ticket-border .user .location p {
+  font-family: var(--main-font);
+  font-size: 15px;
+  text-align: center;
+}
+.ticket-ready .ticket-border .user img {
+  width: 130px;
+}
+.ticket-ready .ticket-border .user .data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #08343c;
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid #133d44;
+}
+.ticket-ready .ticket-border .user .data .input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  padding: 0;
+  font-family: var(--main-font);
+}
+.ticket-ready .ticket-border .user .data .input #one {
+  border-left: none;
+}
+.ticket-ready .ticket-border .user .data .input .form-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 2px solid #1a4c54;
+  border-left: 2px solid #1a4c54;
+}
+.ticket-ready .ticket-border .user .data .input .form-group label {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-bottom: 3px;
+}
+.ticket-ready .ticket-border .user .data .input .form-group .value {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.ticket-ready .ticket-border .user .data #req {
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  left: 0.5rem;
+  gap: 0.3rem;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+.ticket-ready .ticket-border .user .data #req small {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+.ticket-ready .ticket-border #bar {
+  width: 280px;
+}
+.ticket-ready .btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.ticket-ready .btns #book {
+  background-color: inherit;
+  border: 1.5px solid #24a0b5;
+  padding: 0.8rem 5rem;
+  border-radius: 10px;
+  color: #24a0b5;
+  font-family: var(--second-font);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.ticket-ready .btns #tickets {
+  background-color: #24a0b5;
+  border: none;
+  padding: 0.8rem 5.5rem;
+  border-radius: 10px;
+  color: white;
+  font-family: var(--second-font);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    gap: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  .nav .links {
+    display: none;
+  }
+  .ticket-ready {
+    width: 75%;
+  }
+  .ticket-ready .ready {
+    width: 100%;
+  }
+  .ticket-ready .ready #tick {
+    gap: 9.6rem;
+    white-space: nowrap;
+  }
+  .ticket-ready .head-text {
+    white-space: nowrap;
+  }
+  .ticket-ready .head-text h1 {
+    font-size: 25px;
+  }
+  .ticket-ready .head-text span {
+    font-size: 13px;
+  }
+  .ticket-ready .ticket-border .user {
+    gap: 1.5rem;
+  }
+  .ticket-ready .ticket-border .user .location h1 {
+    font-size: 37px;
+  }
+  .ticket-ready .ticket-border .user .location p {
+    font-size: 12px;
+  }
+  .ticket-ready .ticket-border .user img {
+    width: 200px;
+  }
+  .ticket-ready .ticket-border .user .data {
+    font-size: 5px;
+  }
+  .ticket-ready .btns {
+    flex-direction: column;
+  }
+  .ticket-ready .btns #tickets {
+    padding: 0.8rem 6.4rem;
+  }
+  .ticket-ready .btns #book {
+    padding: 0.8rem 5.8rem;
+  }
+}/*# sourceMappingURL=book.css.map */

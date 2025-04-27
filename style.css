@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --body-bg-color: #02191d;
+  --nav-bg-color: #031e23;
+  --main-font: roboto;
+  --header-font: road rage;
+  --second-font: Nanum Myeongjo;
+  --progress-color: #24a0b5;
+  --free-bf: #12464e;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle at center, #0b454f, #02191d);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 17rem;
+  border: 1.5px solid #197686;
+  padding: 0.7rem;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 1;
+  background: inherit;
+}
+.nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav .links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav .links #event {
+  color: white;
+}
+.nav .links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-family: var(--second-font);
+  font-size: 17px;
+}
+.nav #ticket {
+  color: black;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ticket-select {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  background: #041e23;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 20px;
+  gap: 1.5rem;
+  border: 1.5px solid #0e464f;
+  margin-bottom: 5rem;
+  width: 60vw;
+}
+.ticket-select .select-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.ticket-select .select-text span {
+  display: flex;
+  gap: 34rem;
+  font-family: var(--second-font);
+  font-size: 25px;
+  font-weight: 300;
+  align-items: center;
+  white-space: nowrap;
+}
+.ticket-select .select-text span small {
+  font-size: 13px;
+  font-family: var(--main-font);
+}
+.ticket-select .select-text progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 100%;
+  height: 5px;
+}
+.ticket-select .select-text progress::-webkit-progress-bar {
+  background-color: #0e464f;
+  border-radius: 10px;
+}
+.ticket-select .select-text progress::-webkit-progress-value {
+  background-color: #24a0b5;
+  border-radius: 10px;
+}
+.ticket-select .announce {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #08252b;
+  padding: 1.5rem;
+  border-radius: 20px;
+  border: 1.5px solid #0e464f;
+}
+.ticket-select .announce .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(170deg, #0d3941, #082228);
+  padding: 1rem 4rem;
+  border-radius: 20px;
+  border: 1.5px solid #07373f;
+  gap: 0.5rem;
+}
+.ticket-select .announce .location h1 {
+  font-family: var(--header-font);
+  font-size: 55px;
+  font-weight: 300;
+}
+.ticket-select .announce .location span {
+  font-family: var(--main-font);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+}
+.ticket-select .announce .location p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--main-font);
+  font-size: 14px;
+  font-weight: 300;
+}
+.ticket-select .announce .hr {
+  height: 3px;
+  background: #07373f;
+}
+.ticket-select .announce .ticket-type {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--main-font);
+}
+.ticket-select .announce .ticket-type span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.ticket-select .announce .ticket-type .types {
+  display: flex;
+  align-items: center;
+  background: #052228;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1.5px solid #07373f;
+  gap: 1rem;
+  justify-content: space-around;
+}
+.ticket-select .announce .ticket-type .types #reg {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #12464e;
+  padding: 1rem 2.5rem;
+  border: 1.5px solid #197686;
+  border-radius: 13px;
+}
+.ticket-select .announce .ticket-type .types #vip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 1rem 4rem;
+  border: 2px solid #197686;
+  border-radius: 13px;
+}
+.ticket-select .announce .ticket-number {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: var(--main-font);
+}
+.ticket-select .announce .ticket-number span {
+  font-size: 14px;
+  font-weight: 300;
+}
+.ticket-select .announce .ticket-number select {
+  background: inherit;
+  color: white;
+  font-family: var(--main-font);
+  border: 1.5px solid #07373f;
+  padding: 0.8rem;
+  border-radius: 15px;
+  outline: none;
+}
+.ticket-select .announce .ticket-number select option {
+  background: #08252b;
+}
+.ticket-select .announce .btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.ticket-select .announce .btns #cancel {
+  background: inherit;
+  padding: 0.7rem 9.5rem;
+  color: #24a0b5;
+  border: 1.5px solid #24a0b5;
+  border-radius: 8px;
+  font-family: var(--second-font);
+  cursor: pointer;
+}
+.ticket-select .announce .btns #next {
+  background: #24a0b5;
+  padding: 0.7rem 10.1rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--second-font);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    gap: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  .nav .links {
+    display: none;
+  }
+  .ticket-select {
+    margin-top: 7.5rem;
+    padding: 2rem;
+    width: 75%;
+    margin-bottom: 2rem;
+  }
+  .ticket-select .select-text {
+    gap: 0.6rem;
+  }
+  .ticket-select .select-text span {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+  }
+  .ticket-select .announce .location h1 {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .ticket-select .announce .location span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .ticket-select .announce .location p {
+    font-size: 11px;
+    flex-direction: column;
+  }
+  .ticket-select .announce .ticket-type #sel {
+    font-size: 17px;
+  }
+  .ticket-select .announce .ticket-type .types {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .ticket-select .announce .ticketno {
+    padding: 1rem 0.5rem;
+  }
+  .ticket-select .announce .ticketno label {
+    position: relative;
+    left: 0.3rem;
+  }
+  .ticket-select .announce .btns {
+    flex-direction: column-reverse;
+    gap: 0.6rem;
+  }
+  .ticket-select .announce .btns #cancel {
+    padding: 0.7rem 6.3rem;
+  }
+  .ticket-select .announce .btns #next {
+    padding: 0.7rem 6.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */
