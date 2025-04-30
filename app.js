@@ -69,13 +69,13 @@ if (ticketbtn) {
     const name = document.querySelector("#name").value;
     const email = document.querySelector("#email").value;
     const message = document.querySelector("#message").value;
-    const img = document.querySelector("#file").files[0];
-    if (!name || !email || !message || !img) {
+
+    if (!name || !email || !message) {
       alert("Please fill in all fields");
       return;
     }
 
-    const data = { name, email, message, img };
+    const data = { name, email, message };
 
     try {
       const docRef = await addDoc(collection(db, "User Info"), data);
