@@ -123,21 +123,17 @@ body {
       border: 1.5px solid #0e464f;
       padding: 1.5rem;
       gap: 1rem;
-      padding-bottom: 2.8rem;
+
       span {
         color: white;
         font-family: var(--main-font);
         font-size: 15px;
         font-weight: 300;
       }
-      #dark-border {
-        background: #041b20;
-        height: 35vh;
-        width: 100vh;
-      }
-      label {
-        position: absolute;
-        right: 40%;
+      .inp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
     .hr {
@@ -242,16 +238,10 @@ body {
     }
     .details {
       .upload {
-        #dark-border {
-          display: none;
-        }
         label {
           img {
             width: 200px;
           }
-          position: relative;
-          right: 0.3rem;
-          top: 0.5rem;
         }
       }
       .btns {

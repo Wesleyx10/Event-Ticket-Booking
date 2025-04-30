@@ -130,7 +130,7 @@ body {
     gap: 2rem;
     align-items: center;
     background: radial-gradient(circle at center, #031011, #104f58);
-    padding: 1rem;
+    padding: 1.7rem;
     border: 1.8px solid #24a0b5;
     border-radius: 20px;
     position: relative;
@@ -139,7 +139,7 @@ body {
       display: flex;
       flex-direction: column;
       background: #072b2f;
-      padding: 1rem;
+      padding: 1.5rem;
       border-radius: 15px;
       border: 1.8px solid #24a0b5;
       gap: 1.5rem;
@@ -172,25 +172,30 @@ body {
         padding: 1rem;
         border-radius: 15px;
         border: 2px solid #133d44;
+        white-space: normal;
         .input {
           display: grid;
           grid-template-columns: 1fr 1fr;
-
+          justify-content: center;
           color: white;
           padding: 0;
+          white-space: nowrap;
           font-family: var(--main-font);
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+          white-space: normal;
+
           #one {
             border-left: none;
+            max-width: 200px;
           }
           .form-group {
             display: flex;
             flex-direction: column;
             padding: 10px;
-
             border-bottom: 2px solid #1a4c54;
-
             border-left: 2px solid #1a4c54;
-
+            max-width: 160px;
             label {
               font-size: 0.9rem;
               color: #a0a0a0;
@@ -254,7 +259,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 0px) and (max-width: 500px) {
   .nav {
     gap: 5rem;
     padding: 1rem;
@@ -269,7 +274,7 @@ body {
     .ready {
       width: 100%;
       #tick {
-        gap: 9.6rem;
+        gap: 8.5rem;
         white-space: nowrap;
       }
     }
@@ -283,8 +288,10 @@ body {
       }
     }
     .ticket-border {
+      width: 85%;
       .user {
         gap: 1.5rem;
+        width: 90%;
         .location {
           h1 {
             font-size: 37px;
@@ -298,6 +305,15 @@ body {
         }
         .data {
           font-size: 5px;
+          width: 90%;
+          .input {
+            #one {
+              max-width: 88px;
+            }
+            .form-group {
+              max-width: 88px;
+            }
+          }
         }
       }
     }
