@@ -247,7 +247,7 @@ body {
   cursor: pointer;
   white-space: nowrap;
 }
-.ticket-ready .btns #tickets {
+.ticket-ready .btns .ticket {
   background-color: #24a0b5;
   border: none;
   padding: 0.8rem 5.5rem;
@@ -315,7 +315,7 @@ body {
   .ticket-ready .btns {
     flex-direction: column;
   }
-  .ticket-ready .btns #tickets {
+  .ticket-ready .btns .ticket {
     padding: 0.8rem 6.4rem;
   }
   .ticket-ready .btns #book {

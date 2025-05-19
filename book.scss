@@ -246,7 +246,7 @@ body {
       cursor: pointer;
       white-space: nowrap;
     }
-    #tickets {
+    .ticket {
       background-color: #24a0b5;
       border: none;
       padding: 0.8rem 5.5rem;
@@ -319,7 +319,7 @@ body {
     }
     .btns {
       flex-direction: column;
-      #tickets {
+      .ticket {
         padding: 0.8rem 6.4rem;
       }
       #book {
